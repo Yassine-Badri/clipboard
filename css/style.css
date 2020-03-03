@@ -1,17 +1,43 @@
+/* 
+0-600px        :    phone
+600-900px      :    tablet portrait
+900-1200px     :    tablet landscape
+1200-1800px    :    big desktop
+
+$breakpoint argument choices :
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em = 16px
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
 body {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: "Bai Jamjuree", "sans-serif"; }
 
 p {
   margin: 0 auto;
   width: 42%;
   font-weight: 400;
-  margin: 2rem auto;
+  margin: 2.5rem auto;
   color: #9fabb2;
   text-align: center; }
 
@@ -22,11 +48,11 @@ p {
 .snippets h2,
 .workflow h2 {
   text-align: center;
-  margin-top: 5rem; }
+  margin-top: 7rem; }
 
 .clipboard h2 {
   text-align: center;
-  margin-top: 5rem; }
+  margin-top: 7rem; }
 
 .clipboard__ipad {
   width: 100%;
@@ -34,19 +60,19 @@ p {
 
 .keeptrack {
   display: flex;
-  margin: 2rem; }
+  margin: 3rem; }
   .keeptrack__Mac {
     flex: 1; }
   .keeptrack__caption {
     flex: 1;
     text-align: left;
-    padding: 3rem; }
+    padding: 4rem; }
     .keeptrack__caption p {
       text-align: left;
       width: 100%; }
 
 .supercharge {
-  margin-top: 5rem;
+  margin-top: 7rem;
   display: flex;
   width: 80%;
   margin: 0 auto; }
@@ -55,15 +81,15 @@ p {
   text-align: center;
   width: 100%; }
   .card img {
-    margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
   .card p {
     width: 90%; }
 
 .partners {
-  margin: 5rem auto;
+  margin: 7rem auto;
   text-align: center; }
   .partners__logo {
-    margin: 2rem;
+    margin: 3rem;
     text-align: center; }
 
 .download {
@@ -72,15 +98,15 @@ p {
 .footer {
   display: flex;
   background-color: #edf2f4;
-  height: 8rem;
+  height: 9rem;
   align-items: center;
-  padding: 5rem 0; }
+  padding: 9rem 0; }
   .footer__logo {
     text-align: center;
     width: 36%; }
     .footer__logo img {
-      height: 5rem;
-      width: 5rem; }
+      height: 7rem;
+      width: 7rem; }
 
 .links {
   width: 100%;
@@ -92,34 +118,37 @@ p {
     font-weight: 400;
     color: #4c545d;
     text-align: left;
-    padding: 1rem;
+    padding: 1.5rem;
     list-style: none;
     text-decoration: none; }
+    .links ul:active,
+    .links ul a:active {
+      color: #26baa4; }
   .links ul li {
-    padding-bottom: 1rem; }
+    padding-bottom: 1.5rem; }
 
 .header {
   width: 100%;
   height: 100%;
-  padding-top: 2rem;
-  padding-bottom: 4rem; }
+  padding-top: 3rem;
+  padding-bottom: 5rem; }
   .header h1 {
     text-align: center;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.7px;
     line-height: 2; }
   .header p {
     margin: 0 auto;
     width: 42%;
     font-weight: 400;
-    margin: 2rem auto;
+    margin: 3rem auto;
     color: #9fabb2;
     text-align: center; }
 
 .btn {
-  padding: 0.8rem 2rem;
+  padding: 1rem 3rem;
   border: none;
   border-radius: 25px;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   color: #fff;
   font-weight: 600;
   cursor: pointer; }
@@ -142,7 +171,7 @@ p {
   text-align: left;
   width: 36%; }
   .socialM img {
-    padding: 1rem; }
+    padding: 1.5rem; }
   .socialM__facebook {
     filter: invert(35%) sepia(71%) saturate(437%) hue-rotate(181deg) brightness(86%) contrast(89%); }
     .socialM__facebook:active {

@@ -1,18 +1,34 @@
+@import "__mixins";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1rem = 10px, 10/16= 62.5%
+    
+    @include respond (tab-land) {
+      font-size: 56.25%; //1rem = 9px, 9/16= 56.25%
+    }
+    @include respond (tab-port) {
+      font-size: 50%; //1rem = 8px, 8/16= 50%
+    }
+    @include respond (big-desktop) {
+      font-size: 75%; //1rem = 12px, 12/16= 75%
+    }
+  }
   
 body {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-family: "Bai Jamjuree", "sans-serif";
 }
 p {
     margin: 0 auto;
     width: 42%;
     font-weight: 400;
-    margin: 2rem auto;
+    margin: 2.5rem auto;
     color: hsl(201, 11%, 66%);
     text-align: center;
 }
@@ -25,13 +41,13 @@ p {
 .snippets h2,
 .workflow h2 {
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .clipboard {
     h2 {
         text-align: center;
-        margin-top: 5rem;
+        margin-top: 7rem;
     }
     &__ipad {
         width: 100%;
@@ -41,7 +57,7 @@ p {
   
 .keeptrack {
     display: flex;
-    margin: 2rem;
+    margin: 3rem;
     &__Mac {
         flex: 1;
     }
@@ -49,7 +65,7 @@ p {
     &__caption {
         flex: 1;
         text-align: left;
-        padding: 3rem;
+        padding: 4rem;
         p {
             text-align: left;
             width: 100%;
@@ -59,7 +75,7 @@ p {
   
   
 .supercharge  {
-    margin-top: 5rem;
+    margin-top: 7rem;
     display: flex;
     width: 80%;
     margin: 0 auto;
@@ -69,7 +85,7 @@ p {
     text-align: center;
     width: 100%;
     & img {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     & p {
         width: 90%;
@@ -78,10 +94,10 @@ p {
 
   
 .partners {
-    margin: 5rem auto;
+    margin: 7rem auto;
     text-align: center;
     &__logo {
-        margin: 2rem;
+        margin: 3rem;
         text-align: center;
     }
 }
@@ -93,16 +109,16 @@ p {
 .footer {
     display: flex;
     background-color: #edf2f4;
-    height: 8rem;
+    height: 9rem;
     align-items: center;
-    padding: 5rem 0;
+    padding: 9rem 0;
 
     &__logo{
         text-align: center;
         width: 36%;
         img{
-            height: 5rem;
-            width: 5rem;
+            height: 7rem;
+            width: 7rem;
         }
     }
 }
@@ -117,25 +133,29 @@ p {
       font-weight: 400;
       color: hsl(210, 10%, 33%);
       text-align: left;
-      padding: 1rem;
+      padding: 1.5rem;
       list-style: none;
       text-decoration: none;
+      
+      &:active {
+          color: hsl(171, 66%, 44%);
+      }
     }
     
     & ul li {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
 }
 
 .header {
     width: 100%;
     height: 100%;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 
     h1 {
         text-align: center;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.7px;
         line-height: 2;
     }
 
@@ -143,16 +163,16 @@ p {
         margin: 0 auto;
         width: 42%;
         font-weight: 400;
-        margin: 2rem auto;
+        margin: 3rem auto;
         color: hsl(201, 11%, 66%);
         text-align: center;
     }
 }
 .btn {
-    padding: 0.8rem 2rem;
+    padding: 1rem 3rem;
     border: none;
     border-radius: 25px;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
@@ -185,7 +205,7 @@ p {
     text-align: left;
     width: 36%;
     img {
-        padding: 1rem;
+        padding: 1.5rem;
     }
     &__facebook {
         filter: invert(35%) sepia(71%) saturate(437%) hue-rotate(181deg) brightness(86%) contrast(89%);
