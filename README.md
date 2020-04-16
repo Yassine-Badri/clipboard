@@ -20,3 +20,5 @@ This will watch your sass files, compile them and run your dev server
 ```sh
 $ npm start
 ```
+### Live preview
+https://clipboardoffical.netlify.app/
