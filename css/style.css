@@ -58,11 +58,23 @@ p {
   width: 100%;
   text-align: center; }
 
+.clipboard__img {
+  width: 60%; }
+  @media only screen and (max-width: 56.25em) {
+    .clipboard__img {
+      width: 80%; } }
+
 .keeptrack {
   display: flex;
   margin: 3rem; }
+  @media only screen and (max-width: 75em) {
+    .keeptrack {
+      text-align: center;
+      flex-direction: column; } }
   .keeptrack__Mac {
     flex: 1; }
+  .keeptrack__img {
+    width: 70%; }
   .keeptrack__caption {
     flex: 1;
     text-align: left;
@@ -91,6 +103,9 @@ p {
   .partners__logo {
     margin: 3rem;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .partners__logo {
+        width: 17%; } }
 
 .download {
   text-align: center; }
@@ -107,10 +122,18 @@ p {
     .footer__logo img {
       height: 7rem;
       width: 7rem; }
+  @media only screen and (max-width: 56.25em) {
+    .footer {
+      height: 90%;
+      padding: 2rem;
+      flex-direction: column; } }
 
 .links {
   width: 100%;
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .links {
+      justify-content: center; } }
   .links ul,
   .links ul a {
     display: inline;
@@ -170,6 +193,9 @@ p {
 .socialM {
   text-align: left;
   width: 36%; }
+  @media only screen and (max-width: 56.25em) {
+    .socialM {
+      text-align: center; } }
   .socialM img {
     padding: 1.5rem; }
   .socialM__facebook {

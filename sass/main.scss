@@ -53,13 +53,27 @@ p {
         width: 100%;
         text-align: center;
     }
+    &__img {
+        width: 60%;
+        @include respond (tab-port) {
+            width: 80%;
+        }
+    }
 }
   
 .keeptrack {
+    @include respond (tab-land) {
+        text-align: center;
+        flex-direction: column;
+      }
     display: flex;
     margin: 3rem;
     &__Mac {
         flex: 1;
+    }
+
+    &__img {
+        width: 70%;
     }
       
     &__caption {
@@ -99,7 +113,11 @@ p {
     &__logo {
         margin: 3rem;
         text-align: center;
+        @include respond (tab-port) {
+            width: 17%;
+        }
     }
+    
 }
   
 .download {
@@ -121,11 +139,21 @@ p {
             width: 7rem;
         }
     }
+    @include respond (tab-port) {
+        height: 90%;
+        padding: 2rem;
+        flex-direction: column;
+    }
 }
   
 .links {
     width: 100%;
     display: flex;
+
+    @include respond (tab-port) {
+        justify-content: center;
+    }
+
     & ul,
     & ul a {
       display: inline;
@@ -204,6 +232,9 @@ p {
 .socialM {
     text-align: left;
     width: 36%;
+    @include respond (tab-port) {
+        text-align: center;
+    }
     img {
         padding: 1.5rem;
     }
